@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.card .image img {
+    width: 290px;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+.card {
+    width: 303px;
+    height: 407px;
+    padding-top: 10px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.card .image{
+    padding-bottom: 10px;
+    transition: .5s ease;
+}
+.card .image:hover{
+    transform: scale(1.05);
+}
+.main-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 35px;
+}
+.detail .title {
+    font-size: 16px;
+    color: rgb(72 64 64);
+}
+.detail .price span {
+   font-size: 19px;
+   font-weight: bolder;
+   color: #000;
+}
+.bld{
+    font-weight: bolder;
+}

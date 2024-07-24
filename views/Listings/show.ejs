@@ -1,0 +1,22 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+<div class="show-box">
+    <h1>Listing Details : </h1>
+    <ul>
+        <b>Title : </b>
+        <li><%= list.title %></li>
+        <b>Description :</b> 
+        <li><%= list.description %></li>
+       <b> Price : </b>
+        <li>&#x20A8; <%= list.prize.toLocaleString("en-PK") %></li>
+        <b>Location :</b> 
+        <li><%= list.location %></li>
+        <b>Country : </b>
+        <li><%= list.country %></li>
+    </ul>
+</div>
+    <a class="a-tab" href="/listing/<%= list._id %>/edit">Edit listing</a>
+    <a class="a-tab" href="/listing">Go back to listings Page </a>
+
+    <form action="/listing/<%= list._id %>?_method=DELETE" method="POST" class="show">
+        <button>Delete listing</button>
+    </form>

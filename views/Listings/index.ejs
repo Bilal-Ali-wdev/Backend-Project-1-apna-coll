@@ -1,0 +1,21 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+<link rel="stylesheet" href="css/style2.css">
+    <h1 class="h1-tag">All Listings</h1>
+    <div class="main-box">
+    <% for(const Listing of AllListings){ %>
+<a href="/listing/<%=Listing._id%>">
+      <div class="card">
+           <div class="image">
+               <img src="<%= Listing.image%>" alt="">
+           </div>
+        <div class="detail">
+          <p class="title"><%= Listing.title%></p>
+          <p class="price"><span>&#x20A8;<%= typeof Listing.prize === 'number' ? Listing.prize.toLocaleString("en-PK") : 'Invalid prize' %></span>/night</p>
+          <p class="City"><span class="bld">City : </span><%= Listing.location%></p>
+          <p class="Country"><span class="bld">Country : </span><%= Listing.country%></p>
+        </div>
+      </div>
+    </a>
+  <%}%>
+</div>
+    
